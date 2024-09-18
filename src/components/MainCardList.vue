@@ -36,7 +36,7 @@ export default {
         MainCard
     },
 
-    created() {
+    mounted() {
         this.getCards();
     }
 }

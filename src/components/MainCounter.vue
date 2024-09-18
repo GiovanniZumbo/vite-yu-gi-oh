@@ -8,6 +8,13 @@ export default {
         }
     },
 
+    computed: {
+        cardListLength() {
+            return store.cardList ? store.cardList.length : 'no';
+        }
+    },
+
+
     props: {
         cardObject: {
             type: Object,
@@ -19,7 +26,7 @@ export default {
 
 <template>
     <div class="counter bg-dark p-lg-2">
-        <h5>Found {{ store.cardList.length }} cards.</h5>
+        <h5>Found {{ cardListLength }} cards.</h5>
     </div>
 </template>
 
