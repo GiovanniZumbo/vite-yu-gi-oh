@@ -10,7 +10,7 @@ export default {
 
 <template>
     <div class="counter bg-dark p-lg-2">
-        <h3>Found n cards.</h3>
+        <h5>Found n cards.</h5>
     </div>
 </template>
 
@@ -18,6 +18,5 @@ export default {
 .counter {
     height: 50px;
     color: white;
-
 }
 </style>
