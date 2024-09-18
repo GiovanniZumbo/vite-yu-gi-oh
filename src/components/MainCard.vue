@@ -20,18 +20,32 @@ export default {
 
 <template>
     <div class="col">
-        <div class="card mb-2">
+        <div class="card mb-2 text-center">
             <img :src="cardObject.card_images[0].image_url_small" class="card-img-top" alt="img">
             <div class="card-body">
-                <h5 class="card-title">{{ cardObject.name }}</h5>
+                <h5 class="card-title text-light text-uppercase">{{ cardObject.name }}</h5>
 
             </div>
             <ul class="list-group list-group-flush">
-                <li class="list-group-item">{{ cardObject.archetype }}</li>
-                <li class="list-group-item">{{ cardObject.type }}</li>
+                <li class="list-group-item">Archetype: {{ cardObject.archetype }}</li>
+                <li class="list-group-item">Type: {{ cardObject.type }}</li>
             </ul>
         </div>
     </div>
 </template>
 
-<style scoped></style>
+<style lang="scss" scoped>
+.card,
+li {
+    background-color: var(--sand-yellow);
+}
+
+.card {
+    height: 520px;
+}
+
+li,
+.card-body {
+    border: none;
+}
+</style>
