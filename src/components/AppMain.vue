@@ -1,4 +1,5 @@
 <script>
+import MainCard from './MainCard.vue';
 import MainCounter from './MainCounter.vue';
 
 
@@ -11,7 +12,8 @@ export default {
     },
 
     components: {
-        MainCounter
+        MainCounter,
+        MainCard
     }
 }
 
@@ -23,15 +25,10 @@ export default {
         <div class="container">
             <div class="wrapper p-5 bg-light">
                 <MainCounter />
-                <div class="card" style="width: 18rem;">
-                    <img src="..." class="card-img-top" alt="img">
-                    <div class="card-body">
-                        <h5 class="card-title">Card name</h5>
-
+                <div class="row row-cols-5">
+                    <div class="col">
+                        <MainCard />
                     </div>
-                    <ul class="list-group list-group-flush">
-                        <li class="list-group-item">TYPE</li>
-                    </ul>
                 </div>
             </div>
         </div>
