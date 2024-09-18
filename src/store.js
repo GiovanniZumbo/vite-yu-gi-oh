@@ -4,9 +4,7 @@ export const store = reactive({
 
 data(){
     return{
-cardList: []
+        cardList: [],
     }
-}
-
-
+}   
 })

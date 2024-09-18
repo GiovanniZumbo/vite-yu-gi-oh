@@ -1,8 +1,17 @@
 <script>
+import { store } from '../store.js'
+
 export default {
     data() {
         return {
+            store
+        }
+    },
 
+    props: {
+        cardObject: {
+            type: Object,
+            Required: true,
         }
     }
 }
@@ -10,7 +19,7 @@ export default {
 
 <template>
     <div class="counter bg-dark p-lg-2">
-        <h5>Found n cards.</h5>
+        <h5>Found {{ store.cardList.length }} cards.</h5>
     </div>
 </template>
 

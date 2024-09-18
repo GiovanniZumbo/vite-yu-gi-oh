@@ -7,7 +7,6 @@ import { store } from '../store';
 export default {
     data() {
         return {
-            cardList: [],
             apiUrl: "https://db.ygoprodeck.com/api/v7/cardinfo.php?num=20&offset=0",
             store
 
@@ -24,7 +23,7 @@ export default {
                 .then((response) => {
 
                     console.log(response);
-                    this.cardList = response.data.data;
+                    store.cardList = response.data.data;
                 })
                 .catch(function (error) {
                     console.log(error);
@@ -46,7 +45,7 @@ export default {
 <template>
     <div class="row row-cols-5">
 
-        <MainCard v-for="card in cardList" :key="card.id" :cardObject="card" />
+        <MainCard v-for="card in store.cardList" :key="card.id" :cardObject="card" />
 
     </div>
 </template>
