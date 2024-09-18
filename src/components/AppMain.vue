@@ -1,6 +1,8 @@
 <script>
-import MainCard from './MainCard.vue';
+
+import MainCardList from './MainCardList.vue';
 import MainCounter from './MainCounter.vue';
+
 
 
 
@@ -13,7 +15,7 @@ export default {
 
     components: {
         MainCounter,
-        MainCard
+        MainCardList,
     }
 }
 
@@ -25,11 +27,7 @@ export default {
         <div class="container">
             <div class="wrapper p-5 bg-light">
                 <MainCounter />
-                <div class="row row-cols-5">
-                    <div class="col">
-                        <MainCard />
-                    </div>
-                </div>
+                <MainCardList />
             </div>
         </div>
     </main>
