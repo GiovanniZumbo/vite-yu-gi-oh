@@ -11,7 +11,7 @@ export default {
 
     props: {
         cardObject: {
-            type: Array,
+            type: Object,
             Required: true,
         }
     }
