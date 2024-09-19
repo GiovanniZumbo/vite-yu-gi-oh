@@ -5,7 +5,8 @@ export default {
     data() {
         return {
             urlApi: "https://db.ygoprodeck.com/api/v7/archetypes.php",
-            archetypesList: []
+            archetypesList: [],
+            selectedArchetype: '',
         }
     },
 
@@ -20,8 +21,13 @@ export default {
                     };
                     console.log(this.archetypesList)
                 })
+        },
 
-        }
+        sendSelectedArchetype(string) {
+            console.log(string)
+            this.$emit("readSelectedArchetype",
+                string)
+        },
     },
 
     created() { this.getArchetypes() }
@@ -31,9 +37,10 @@ export default {
 
 <template>
     <div class="container">
-        <select class="form-select mb-4 w-25">
-            <option selected> - Choose the archetype -</option>
-            <option v-for="(archetype, i) in archetypesList " value="{{ i + 1 }}">{{ archetype }}</option>
+        <select class="form-select mb-4 w-25" v-model="this.selectedArchetype"
+            @change="sendSelectedArchetype(selectedArchetype)">
+            <option selected disabled value=""> - Choose the archetype -</option>
+            <option v-for="(archetype, i) in archetypesList ">{{ archetype }}</option>
         </select>
     </div>
 </template>
