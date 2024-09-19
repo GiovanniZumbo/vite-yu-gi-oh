@@ -2,8 +2,7 @@
 
 import MainCardList from './MainCardList.vue';
 import MainCounter from './MainCounter.vue';
-
-
+import MainSelect from './MainSelect.vue';
 
 
 export default {
@@ -16,6 +15,7 @@ export default {
     components: {
         MainCounter,
         MainCardList,
+        MainSelect
     }
 }
 
@@ -26,6 +26,7 @@ export default {
     <main>
         <div class="container">
             <div class="wrapper p-5 bg-light">
+                <MainSelect />
                 <MainCounter />
                 <MainCardList />
             </div>
